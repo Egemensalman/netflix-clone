@@ -1,0 +1,293 @@
+/* yıldız işareti bütün elementleri seç  */
+/* css reset kodu  */
+/* sana verdiğim margin ve padding  değerleri uygularken
+atadığım width ve height değerlerinin dışına çıkma */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+}
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60vw;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    padding: 3px 8px;
+    background-color: rgba(0, 0, 0, 0.059);
+    color: white;
+    border: 1px solid white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all .4s;
+
+}
+
+.btn:hover {
+    background-color: red;
+}
+
+.btn-red {
+    background-color: red;
+
+}
+
+.btn-red:hover {
+    background-color: transparent;
+}
+
+.hero {
+
+    height: 100vh;
+    background-image: url(banner.jpg);
+    background-position: center center;
+    background-size: cover position: relative;
+
+
+
+
+}
+
+.layer {
+    position: absolute;
+    right: 0;
+    left: 0%;
+    top: 0%;
+    bottom: 0%;
+    background-color: black;
+    opacity: 0.6;
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    height: calc(100% - 100px);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2%;
+}
+
+.hero-content h1 {
+
+    font-size: 48px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.hero-buttons input {
+    padding: 7px 100px 7px 15px;
+    background-color: rgba(0, 0, 0, 0.557);
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 4px;
+    color: white;
+}
+
+.hero-buttons button {
+    font-size: 18px;
+}
+
+.navbar img {
+    height: 60px;
+}
+
+.seperator {
+    width: 100%;
+    height: 0;
+    border-bottom: 5px solid rgb(55, 54, 54);
+}
+
+/* info area */
+.info-area {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+
+}
+
+.info-image {
+    position: relative;
+}
+
+.info-image img {
+    width: 500px;
+
+}
+
+.info-image video {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: -1;
+
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* fAQ AREA */
+.faq-area {
+    padding: 35px;
+    text-align: center;
+}
+
+.faq-area h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.faq-box {
+    background-color: #272727;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin: auto;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+
+}
+
+.faq-box-conteiner {
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+    margin-top: 40px;
+
+
+}
+
+.faq-box:hover {
+    background-color: #202020
+}
+
+/* footeralanı */
+.footer {
+    
+    max-width: 60vw;
+    margin: auto;
+    padding: 34px;
+}
+.questions{
+    height: 50px;
+   font-weight: bold;
+}
+
+.footer.questions {
+    font-size: 25px;
+    margin-bottom: 50px;
+
+}
+
+.footer-item-conteiner {
+    display: flex;
+    gap: 40px;
+
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 5px;
+
+}
+
+.footer-item a {
+    color: white;
+    font-size: 18px;
+    transition: .2s all;
+}
+
+.footer-item a:hover {
+    color: red;
+}
+
+/* responsive tasarım */
+@media(max-width:1000px) {
+    .info-area {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+
+
+@media(max-width:700px) {
+    .info-image img {
+        width: 300px !important;
+    }
+
+    .info-image video {
+        width: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 20px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .navbar {
+        width: 90vw;
+
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
